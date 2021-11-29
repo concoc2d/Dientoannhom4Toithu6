@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+ <head>
+ <title>Home</title>
+ <style>
+
+  body{
+   background-image: url('/static/1.jpg');
+   background-size: cover;
+   text-align: center;
+  }
+
+  a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  }
+
+  a:hover, a:active {
+  background-color: red;
+  }
+
+ </style>
+<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+ </head>
+ <body>
+ <div class="tiem-chung">
+	<div id="tc-dulieudangky">
+		<div class="row">
+			<div class="table-responsive col-12">
+				<h3>Danh sách sinh viên</h3>
+			  <table class="table table-striped table-bordered table-hover">
+				<thead>
+				  <tr>
+					<th scope="col">Mã sinh viên</th>
+					<th scope="col">Tên sinh viên</th>
+                   <th scope="col">Email</th>
+                   <th scope="col">SDT</th>
+                   <th scope="col">Address</th>
+                    <th scope="col">Class</th>
+                      <th scope="col">Faculty</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  {%for i in list_table%}
+				  <tr>
+                    {%for i2 in i.studentid.values()%}
+					<td>{{i2}}</td>
+                   {%endfor%}
+                   {%for i3 in i.lastName.values()%}
+					<td>{{i3}}</td>
+                   {%endfor%}
+                   {%for i4 in i.email.values()%}
+					<td>{{i4}}</td>
+                   {%endfor%}
+                   {%for i5 in i.contact.values()%}
+					<td>{{i5}}</td>
+                   {%endfor%}
+                   {%for i6 in i.address.values()%}
+					<td>{{i6}}</td>
+                   {%endfor%}
+                      {%for i7 in i.classsv.values()%}
+					<td>{{i7}}</td>
+                   {%endfor%}
+                      {%for i8 in i.faculty.values()%}
+					<td>{{i8}}</td>
+                   {%endfor%}
+				  </tr>
+				  {%endfor%}
+				</tbody>
+			  </table>
+			</div>
+		</div>
+	</div>
+ </div>
+</div>
+
+
+ <br><br><h1> Student Management System </h1>
+ <br><br><a href="/add_student">Add Student</a><br><br>
+ <br><br><a href="/delete_student">Delete Student </a><br><br>
+ <br><br><a href ="/student_info">Update Student</a><br><br>
+  <br><br><a href ="/info_sinhvien">Tra thông tin của sinh viên</a><br><br>
+ <br><br><a href ="/create_table">Create table studentpy</a><br><br>
+
+ </body>
+ </html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+   <title>delete record</title>
+
+  <style>
+
+   body{
+   background-image: url('/static/5.jpg');
+   background-size: cover;
+   text-align: center;
+   font-weight: bold;
+   font-size: larger;
+  }
+
+  a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  }
+
+  a:hover, a:active {
+  background-color: red;
+  }
+
+  </style>
+<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+ </head>
+ <body>
+<div class="tiem-chung">
+	<div id="tc-dulieudangky">
+		<div class="row">
+			<div class="table-responsive col-12">
+				<h3>Thông tin sinh viên và kiểu dữ liệu lưu trữ</h3>
+			  <table class="table table-striped table-bordered table-hover">
+				<thead>
+				  <tr>
+					<th scope="col">Mã sinh viên</th>
+					<th scope="col">Tên sinh viên</th>
+                   <th scope="col">Email</th>
+                   <th scope="col">SDT</th>
+                   <th scope="col">Address</th>
+                    <th scope="col">Class</th>
+                      <th scope="col">Faculty</th>
+				  </tr>
+				</thead>
+				<tbody>
+
+				  <tr>
+					<td>{{res.studentid}}</td>
+                   <td>{{res.lastName}}</td>
+                      <td>{{res.email}}</td>
+                      <td>{{res.contact}}</td>
+                      <td>{{res.address}}</td>
+                      <td>{{res.classsv}}</td>
+                      <td>{{res.faculty}}</td>
+				  </tr>
+
+				</tbody>
+			  </table>
+			</div>
+		</div>
+	</div>
+ </div>
+ </body>
+ </html> 

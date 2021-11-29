@@ -1,0 +1,217 @@
+/* Google Font Import Link */
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@300&display=swap');
+html,body{
+  margin:0;
+  padding:0;
+  height: 100%;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+/*phần header*/
+.main {
+  min-height: 100%;
+  position: relative;
+}
+.header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0px 0;
+  background: #ff0;
+  height: auto;
+  z-index: 5;
+}
+nav{
+  padding: 15px;
+  height: min-content;
+  transition: all 0.4s ease;
+}
+nav.sticky{
+  padding: 15px 20px;
+  background: #4070f4;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+nav ul{
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav ul li{
+  list-style: none;
+}
+/*chỉnh vị trí logo*/
+nav .logo a{
+  position: relative;
+  left: 0;
+  top: 10px;
+  font-weight: 500;
+  font-size: 30px;
+  color: #4070f4;
+  float: left;
+}
+nav.sticky .logo a{
+  color: #fff;
+}
+ .nav-links li a{
+  text-decoration: none;
+  color: #e60808;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 0px 4px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+/*chỉnh vị trí phần header content*/
+nav .nav-content .nav-links{
+  position: relative;
+  top: 20px;
+  right: 0;
+}
+nav .nav-content .nav-links li a{
+  margin-left: 20px;
+}
+/*chỉnh vị trí phần top header*/
+nav .topnav li a{
+  font-size: 15px;
+}
+nav .topnav{
+  border-bottom-color: black;
+  border-bottom-style: groove;
+  border-bottom-width: 1px;
+}
+ .nav-links li a:hover{
+   color: #d1ff04;
+ }
+ nav.sticky .nav-links li a{
+   color: #fff;
+   transition: all 0.4s ease;
+}
+ nav.sticky .nav-links li a:hover{
+  color: #0E2431;
+}
+/*phần footer*/
+.footer {
+  width: 90%;
+  height: min-content;
+  margin-left: 5%;
+  background-color: white;
+  border-top: black 2px groove;
+}
+/*phần content*/
+.main .content {
+  margin-top: 150px;
+  width: 90%;
+  margin-left: 5%;
+  padding: 20px;
+}/*form thông tin người dùng*/
+#user-form{
+  width: 100%;
+  height: min-content;
+  font-size: 20px;
+}
+#user-form label{
+  margin: 5px;
+  padding: 2px;
+  text-transform: uppercase;
+  margin-left: 20px;
+}
+#user-form input{
+  margin-left: 10px;
+  width: 100%;
+}
+#user-form button{
+  justify-items: center;
+  text-transform: uppercase;
+  width: 100%;
+  margin-left: 50%;
+}
+/*form đăng ký xét nghiệm*/
+#xetnghiem-form{
+  width: 100%;
+  height: min-content;
+  font-size: 20px;
+}
+#xetnghiem-form label,p{
+  margin: 5px;
+  padding: 2px;
+  text-transform: uppercase;
+  margin-left: 20px;
+}
+#xetnghiem-form input{
+  margin-left: 10px;
+  width: 100%;
+}
+#xetnghiem-form button{
+  justify-items: center;
+  text-transform: uppercase;
+  width: 100%;
+  margin-left: 50%;
+}
+/*form khai báo y tế*/
+#kb-form{
+  width: 100%;
+  height: min-content;
+  font-size: 20px;
+}
+#kb-form label,p{
+  margin: 5px;
+  padding: 2px;
+  text-transform: uppercase;
+  margin-left: 20px;
+}
+#kb-form input,textarea{
+  margin-left: 10px;
+  width: 100%;
+  max-height: 200px;
+}
+#kb-form button{
+  justify-items: center;
+  text-transform: uppercase;
+  width: 100%;
+  margin-left: 50%;
+}
+/* form đăng ký tiêm chủng*/
+#tc-form{
+  width: 100%;
+  height: min-content;
+  font-size: 20px;
+}
+#tc-form label{
+  margin: 5px;
+  padding: 2px;
+  text-transform: uppercase;
+  margin-left: 20px;
+}
+#tc-form input{
+  margin-left: 10px;
+  width: 100%;
+}
+#tc-form button{
+  justify-items: center;
+  text-transform: uppercase;
+  width: 100%;
+  margin-left: 50%;
+}
+#tc-form p,h3{
+  margin-left: 0;
+}
+/* phần bảng dữ liệu */
+.container {
+  width: 100%;
+  padding: 2rem 0rem;
+  margin-top: 20px;
+}
+.table-responsive {
+  height: calc(63px * (5 + 1));
+  overflow: auto;
+}
+.table thead th {
+  background-color: white;
+  position: sticky;
+  top: 0;
+}
+.content .tiem-chung {
+  margin-top: 20px;
+}
