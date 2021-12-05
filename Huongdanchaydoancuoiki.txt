@@ -1,0 +1,36 @@
+-Tạo 1 bảng trong DynamoDB:
++ table-name: studentpy
++ PrimaryKey: studentid
++ SortKey: lastName
+
+-Cài máy ảo EC2 và môi trường máy ảo
++ sudo apt-get update
++ sudo apt-get install python3
++ sudo apt-get install python3-pip
++ sudo pip3 install flask
++ sudo apt-get install nginx
++ sudo apt-get install gunicorn3
+-Tạo tệp aws
++ mkdir ~/.aws
++ vi ~/.aws/credentials(đưa access_key,access_secretkey,accsess_token vào, mẫu như sau)
+
+[default]
+aws_access_key_id = your aws_access_key_id
+aws_secret_access_key = your aws_secret_access_key
+aws_session_token= your aws_session_token
+
++ vi ~/.aws/config
+
+[default]
+region = your region
+output = json
+
+-Chạy project
++ Di chuyển vào thư mục chứa project dùng ls để kiểm tra có file index.py chưa
++ python3 index.py
+
+-Mở port:
++Mở port tương ứng với port đã thông báo khi chạy máy ảo trên EC2
+
+
+
