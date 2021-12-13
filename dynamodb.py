@@ -114,12 +114,13 @@ class DynamoDB:
             Key=Key
         )
         return res
-    def put_item(self,studentid,lastName,email,contact,address,classsv,faculty):
+    def put_item(self,studentid,lastName,email,contact,ngaysinh,address,classsv,faculty):
         Item={
             'studentid': {'S': studentid},
             'lastName': {'S': lastName},
             'email': {'S': email},
             'contact': {'S': contact},
+            'ngaysinh': {'S': ngaysinh},
             'address': {'S': address},
             'classsv': {'S': classsv},
             'faculty': {'S': faculty}
