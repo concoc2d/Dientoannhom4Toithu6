@@ -10,32 +10,18 @@ def index():
     return render_template("index.html",list_table=list_table);
 @app.route("/add_student",methods=['get', 'post'])
 def add_student():
-    msg = "msg"
-    if request.method == 'POST':
-        studentid = request.form["studentid"]
-        lastName = request.form["lastName"]
-        email = request.form["email"]
-        contact = request.form["contact"]
-        address=request.form["address"]
-        classsv = request.form["classsv"]
-        faculty = request.form["faculty"]
 
-        manage_dynamodb.put_item(studentid, lastName, email, contact, address, classsv, faculty)
-        return redirect(request.args.get("next", "/"))
+    studentid = request.form["studentid"]
+    lastName = request.form["lastName"]
+    email = request.form["email"]
+    contact = request.form["contact"]
+    ngaysinh=request.form["user-sn"]
+    address=request.form["address"]
+    classsv = request.form["classsv"]
+    faculty = request.form["faculty"]
 
-    return render_template("add_student.html")
-@app.route("/saverecord")
-def saveRecord():
-
-    return render_template("success_record.html")
-@app.route('/api/chuyenbay', methods=['post'])
-def thoigianbay():
-    data = request.json
-    cart = {
-        "Thoigianbatdau": data["Thoigianbatdau"]
-    }
-    session['tg'] = cart
-    return cart
+    manage_dynamodb.put_item(studentid, lastName, email, contact,ngaysinh, address, classsv, faculty)
+    return redirect(request.args.get("next", "/"))
 
 @app.route("/delete_student",methods=['get', 'post'])
 def delete_student():
@@ -43,6 +29,7 @@ def delete_student():
         studentid = request.form["studentid"]
         lastName = request.form["lastName"]
         manage_dynamodb.delete_item(studentid, lastName)
+        return redirect(request.args.get("next", "/"))
     return render_template("delete_student.html")
 @app.route("/create_table",methods=['get', 'post'])
 def create_table():
@@ -68,10 +55,7 @@ def student_info():
         classsv = request.form["classsv"]
         faculty = request.form["faculty"]
         manage_dynamodb.up_item(studentid, lastName, email, contact, address, classsv, faculty)
-
         return redirect(request.args.get("next", "/"))
-
-
     return render_template("student_info.html")
 if __name__ == '__main__':
-    app.run(host='0.0.0.0',port=8000)
+    app.run(host='0.0.0.0',port=5000)
