@@ -65,8 +65,8 @@ def get_item(g1,g2):
 
     print(res['Item'])
     return res['Item']
-def put_item(s1,s2,s3,s4,s5,s6,s7):
-    get_dynamodb().put_item(s1,s2,s3,s4,s5,s6,s7)
+def put_item(s1,s2,s3,s4,s5,s6,s7,s8):
+    get_dynamodb().put_item(s1,s2,s3,s4,s5,s6,s7,s8)
 def up_item(u1,u2,u3,u4,u5,u6,u7):
     get_dynamodb().update_item(u1,u2,u3,u4,u5,u6,u7)
 def list_table():
@@ -78,15 +78,3 @@ def load_table():
     with open("src/moviedata.json") as json_file:
         movie_list = json.load(json_file)
     get_dynamodb().load_movies("studentpy",movie_list)
-if __name__ == '__main__':
-    # create_dynamodb_table()
-    # describe_table()
-    # update_table_iops()
-    # delete_table()
-    # up_table()
-    # up_item()
-    # load_table()
-    # delete_item()
-    # get_item()
-    # put_item()
-    list_table()
