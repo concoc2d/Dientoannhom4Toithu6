@@ -2,14 +2,28 @@
 + table-name: studentpy
 + PrimaryKey: studentid
 + SortKey: lastName
+-Cài Vpc,Subnet(Private,Public),internet gateway,nat gateway,security group
+-Cài máy ảo EC2:
 
--Cài máy ảo EC2 và môi trường máy ảo
++Khi tạo máy ảo Ec2 Pulbic thêm đoạn sau vào user data
+#!/bin/bash
+# Install Apache Web Server and PHP
+yum install -y httpd mysql php
+# Download Lab files
+wget https://aws-tc-largeobjects.s3.us-west-2.amazonaws.com/CUR-TF-100-ACCLFO-2/2-lab2-vpc/s3/lab-app.zip
+unzip lab-app.zip -d /var/www/html/
+# Turn on web server
+chkconfig httpd on
+service httpd start
+
++Môi trường máy ảo
 + sudo apt-get update
 + sudo apt-get install python3
 + sudo apt-get install python3-pip
 + sudo pip3 install flask
 + sudo apt-get install nginx
 + sudo apt-get install gunicorn3
+
 -Tạo tệp aws
 + mkdir ~/.aws
 + vi ~/.aws/credentials(đưa access_key,access_secretkey,accsess_token vào, mẫu như sau)
