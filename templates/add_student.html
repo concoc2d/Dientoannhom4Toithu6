@@ -8,7 +8,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-
+    <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/js/bootstrap-datepicker.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.1/css/bootstrap-datepicker3.min.css">
+		<script>
+		$( document ).ready(function() {
+		    $("#user-sn").datepicker({
+		        format: 'yyyy-mm-dd'
+		    });
+		    $("#user-sn").on("change", function () {
+		        var fromdate = $(this).val();
+		        alert(fromdate);
+		    });
+		});
+		</script>
  </head>
  <body>
  <h1>Student Information</h1>
@@ -44,6 +58,11 @@
                                                class="form-control"
                                                placeholder="Nhap Sdt..."
                                                id="contact">
+                                      </div>
+      <div class="form-group">
+
+          <p>Ngày Sinh: <input type="text" class="form-control" id="user-sn"  name="user-sn"></p>
+
                                       </div>
      <div class="form-group">
                                         <label for="address">Address</label>
