@@ -40,6 +40,7 @@ region = your region
 output = json
 
 -Chạy project
++Tải project từ github git clone https://github.com/concoc2d/Dientoannhom4Toithu6.git
 + Di chuyển vào thư mục chứa project dùng ls để kiểm tra có file index.py chưa
 + python3 index.py
 
