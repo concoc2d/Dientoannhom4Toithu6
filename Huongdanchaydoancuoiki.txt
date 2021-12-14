@@ -16,7 +16,7 @@ unzip lab-app.zip -d /var/www/html/
 chkconfig httpd on
 service httpd start
 
-+Môi trường máy ảo
+-Môi trường máy ảo
 + sudo apt-get update
 + sudo apt-get install python3
 + sudo apt-get install python3-pip
@@ -24,6 +24,12 @@ service httpd start
 + sudo pip3 install boto3
 + sudo apt-get install nginx
 + sudo apt-get install gunicorn3
+
+(Có thể thử các lệnh sau nếu quá trình cài đặt môi trường bị lỗi
++sudo rm /var/lib/apt/lists/lock
++sudo rm /var/cache/apt/archives/lock
++sudo rm /var/lib/dpkg/lock*
+)
 
 -Tạo tệp aws
 + mkdir ~/.aws
